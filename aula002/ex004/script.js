@@ -17,7 +17,7 @@ function carregar() {
     } else {
         //Boa Noite//
         img.src = 'https://images.pexels.com/photos/1723637/pexels-photo-1723637.jpeg'
-        document.body.style.backgroundImage = `linear-gradient(to bottom, #021F31, #CC480C)`
+        document.body.style.backgroundImage = `linear-gradient(to bottom, #021F31, #554246, #CC480C)`
     }
 }
 
