@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha seu País</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgba(137, 137, 255, 0.589);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            height: 100vh;
+            display: grid;
+            align-content: center;
+            justify-content: center;
+        }
+
+        #pais {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.445);
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        #pais>h1 {
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-size: 1.3em;
+        }
+
+        input {
+            padding: 10px;
+            border-radius: 5px;
+            background-color: rgb(232, 237, 240);
+            text-decoration: none;
+            text-transform: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="pais">
+            <h1>Escolha seu país</h1>
+            <label for="txtpais">Escolha seu país:</label>
+            <input type="text" name="txtpais" id="txtpais">
+            <input type="button" value="Enviar" onclick="escolher()">
+            <div id="res"></div>
+        </div>
+    </div>
+
+    <script>
+        function escolher() {
+            var txtpais = document.getElementById("txtpais")
+            var res = document.getElementById("res")
+            var pais = txtpais.value
+
+            res.innerHTML = `<br><p>Você mora no(a) <strong>${pais}</strong>!</p><br>`
+            if (pais == "Brasil" || pais == "brasil" ) {
+                res.innerHTML += `<p>Você é um(a) <strong>Brasileiro!</strong></p><br>`
+            } else {
+                res.innerHTML += `<p>Você não é um <strong>Brasileiro!</strong></p><br>`
+            }
+        }
+    </script>
+</body>
+</html>

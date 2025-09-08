@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #principal {
+            padding: 20px;
+            text-align: center;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(189, 189, 189);
+        }
+        
+        div#area {
+            margin: auto;
+            background-color: black;
+            color: rgb(255, 255, 255);
+            margin-top: 20px;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            border: 5px solid black;
+            border-radius: 10px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="principal">Eventos DOM</h1>
+
+    <!--Usando HTML pra ler o mouse
+
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja...
+    </div>
+
+    -->
+
+    <div id="area">
+        Interaja...
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar() {
+            a.innerHTML = 'Clicou!'
+            a.style.backgroundColor = 'white'
+            a.style.border = '5px solid black'
+            a.style.color = 'black'
+            a.style.fontSize = '1.5em'
+        }
+        function entrar() {
+            a.innerHTML = 'Entrou!'
+        }
+        function sair() {
+            a.innerHTML = 'Saiu!'
+            a.style.backgroundColor = 'black'
+            a.style.border = '5px solid white'
+            a.style.color = 'white'
+        }
+    </script>
+</body>
+</html>
