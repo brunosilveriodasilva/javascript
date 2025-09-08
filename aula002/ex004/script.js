@@ -20,4 +20,3 @@ function carregar() {
         document.body.style.backgroundImage = `linear-gradient(to bottom, #021F31, #554246, #CC480C)`
     }
 }
-
