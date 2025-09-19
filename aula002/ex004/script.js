@@ -1,11 +1,11 @@
 function carregar() {
-    var msg = window.document.getElementById('msg')
-    var img = window.document.getElementById('img')
+    var msg = document.getElementById('msg')
+    var img = document.getElementById('img')
     var txt = document.getElementById('txt')
     var data = new Date()
     var hora = data.getHours()
 
-    msg.innerHTML = `Agora são ${hora} Horas`
+    msg.innerHTML = `Agora são <strong>${hora} Horas`
     if (hora >= 0 && hora < 6) {
         document.getElementById('txt').innerHTML = `Boa <strong>Madrugada!</strong>`
         img.src = 'https://images.pexels.com/photos/63558/pexels-photo-63558.jpeg'
