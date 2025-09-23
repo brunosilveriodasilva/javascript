@@ -3,6 +3,11 @@ let entradaAtual = "";
 let operadorAtual = ""; 
 const botoes = document.querySelectorAll("button");
 
+function reset() {
+        inputDisplay.style.textAlign = "right";
+        inputDisplay.style.color = ""
+    }
+
 botoes.forEach(botao => {
     botao.addEventListener("click", () => {
         botao.style.transform = "scale(0.96)";
@@ -13,17 +18,22 @@ botoes.forEach(botao => {
 });
 
 function numberClick(value) {
+    reset();
     if (entradaAtual.length === 18) return;
     entradaAtual += value;
     inputDisplay.textContent = entradaAtual;
 }
 
 function operadorClick(operador) {
+    reset();
     if (entradaAtual.length === 18) return;
     if (entradaAtual === "" && operador !== ".") return;
     if (operador === "." && entradaAtual.includes(".")) return;
 
-    if ("+-*/".includes(operador) && entradaAtual.includes(operador)) return;
+    const operadores = ["+", "-", "*", "/"];
+    
+    const ultimoCar = entradaAtual[entradaAtual.length - 1];
+    if (operadores.includes(ultimoCar) && operadores.includes(operador)) return;
 
     entradaAtual += operador;
     inputDisplay.textContent = entradaAtual;
@@ -43,8 +53,9 @@ function calcular() {
         }
         entradaAtual = result;
         inputDisplay.textContent = entradaAtual;
-    } catch (erro) {
+    } catch (error) {
         inputDisplay.innerHTML = "<i>Error</i>";
+        inputDisplay.style.color = "#690000ff"
         inputDisplay.style.textAlign = "center";
         entradaAtual = "";
     }
