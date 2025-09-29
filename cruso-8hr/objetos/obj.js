@@ -1,4 +1,4 @@
-const pessoa = {
+/* const pessoa = {
     nome: "Bruno",
     sobrenome: "Silva", 
     idade: "15",
@@ -33,6 +33,20 @@ const tarefas = [
         valor: false,        
     }
 ];
+console.log(JSON.stringify(tarefas[1])); */
 
-console.log(JSON.stringify(tarefas[1]));
-  
+/* const frutas = ['tomate', 'caju', 'pera', 'banana']
+
+frutas.push(10);
+
+console.log(`Propriedade SORT, ${frutas.sort()}`); // não funciona para números */
+
+const num = [1, 2, 3, 4, 7];
+
+/* for (let pos = 0; pos < num.length; pos++) {
+    console.log(num[pos]);
+}  */
+
+for (let pos in num) { // para cada posição em escreva num[pos]
+    console.log(`A posição ${pos} tem valor ${num[pos]}`);
+}

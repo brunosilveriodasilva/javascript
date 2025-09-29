@@ -6,17 +6,29 @@
 }
 
 body {
-    background-color: rgb(127, 139, 252);
+    background: linear-gradient(to right bottom, rgb(115, 115, 204), rgb(17, 17, 211));
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    height: 100vh;
 }
 
 header {
-    text-align: center;
-    color: white;
-    font-size: 1.2em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.205);
+    background: linear-gradient(to right, #3a3a3a, black);
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    border-right: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    border-left: 0;
+    height: 70px;
+    display: grid;
+    place-items: center;
 }
 
 header>h1 {
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.205);
+    text-align: center;
+    color: white;
     margin: 10px;
 }
 
@@ -27,20 +39,92 @@ header>h1 {
 }
 
 main {
-    background-color: white;
-    width: 500px;
+    background: linear-gradient(to right bottom, rgb(218, 218, 218), rgb(161, 161, 161));
+    width: 100vw;
+    max-width: 450px;
     height: auto;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.507);
 
     display: flex;
+    flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
 }
 
-footer {
-    margin-top: 15px;
+#sec1 {
+    display: grid;
+    place-items: center;
+}
+
+label {
+    font-size: 1.3rem;
+}
+
+#num {
+    background: #f2f7f7;
+    padding: 10px;
+    border: 1;
+    box-shadow: -1px -1px -2px black;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+
+#alert {
+    display: none;
+    margin-top: 10px;
+    color: #e00000;
+    font-size: 1.75rem;
+    text-shadow: 0px 0px 2px rgba(255, 0, 0, 0.644);
+    text-align: center;
+}
+
+select {
+    align-self: center;
+}
+
+#gerar-tab {
+    background-color: #f2f7f7;
+    border: 1;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#gerar-tab:active {
+    transition: transform 0.1s ease;
+    transform: scale(0.95);
+}
+
+#tab {
+    display: none;
+    margin-top: 10px;
+    max-width: 410px;
+    width: 100vw;
+    padding: 15px;
+    background: rgb(0, 68, 0);
     color: white;
     text-align: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.486);
+}
+
+#tab:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.01);
+}
+
+footer {
+    color: white;
+    text-align: center;
+    background: linear-gradient(to right, #3a3a3a, black);
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    border-right: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    border-left: 0;
+    height: 50px;
+    display: grid;
+    place-items: center;
 }

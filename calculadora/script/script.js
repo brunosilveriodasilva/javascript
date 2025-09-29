@@ -5,7 +5,7 @@ const botoes = document.querySelectorAll("button");
 
 function reset() {
         inputDisplay.style.textAlign = "right";
-        inputDisplay.style.color = ""
+        inputDisplay.style.color = "";
     }
 
 botoes.forEach(botao => {
@@ -55,7 +55,7 @@ function calcular() {
         inputDisplay.textContent = entradaAtual;
     } catch (error) {
         inputDisplay.innerHTML = "<i>Error</i>";
-        inputDisplay.style.color = "#690000ff"
+        inputDisplay.style.color = "#690000ff";
         inputDisplay.style.textAlign = "center";
         entradaAtual = "";
     }

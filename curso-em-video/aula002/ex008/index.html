@@ -12,23 +12,26 @@
     </header>
     <div id="main-container">
         <main>
-            <section>
+            <section id="sec1">
                 <p>
                     <label for="num">Número: </label>
                     <input type="number" name="num" id="num">
-                    <input type="button" value="Gerar a tabuada" >
-                </p>       
+                    <input type="button" id="gerar-tab" value="Gerar a tabuada" onclick="tabuada()">
+                </p>
+                <div id="alert">
+                    <p>Digite um número valido!!</p>
+                </div>       
             </section>
-                <select name="tabuada" id="seltab" onclick="tabuada()"></select>
-
-            <section>
-                
+            <section id="sec2">
+                <div id="tab">
+                    
+                </div>
             </section>
         </main>
     </div>
     
     <footer>
-        <p><i>Desenvolvido por: Bruno Silverio Da Silva</i></p>
+        <p>Desenvolvido por: <i>Bruno Silverio Da Silva</i></p>
     </footer>
 
     <script src="script.js"></script>
