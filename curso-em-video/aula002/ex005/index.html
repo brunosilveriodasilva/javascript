@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Horario do dia</title>
+</head>
+<body>
+    <div id="main-container">
+        <main>
+            <section>
+                <div>
+                    <label for="txtano">Ano de Nacimento:</label>
+                    <input type="number" name="txtano" id="txtano" min="1950">
+                    <div id="error"></div>
+                    <p>Sexo:<br>
+                        <label for="masc">Maculino:</label>
+                        <input type="radio" name="txtsx" id="masc" checked> <br>
+                        <label for="fem">Feminino:</label>
+                        <input type="radio" name="txtsx" id="fem">
+                    </p>
+                    <p>
+                        <input type="button" value="Verificar" onclick="check()">
+                    </p>    
+                </div>
+                <div id="frase">
+                    <p>Preencha os dados acima para ver o resultado!</p>
+                </div>
+                <div id="res"></div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Condador</title>
+</head>
+<body>
+    <div id="main-container">
+        <section>
+            <div id="dados">
+                <p class="linha">
+                    <label for="txti">Inicio:</label>
+                    <input type="number" name="inicio" id="txti">
+                </p>
+                <p class="linha">
+                    <label for="txtf">Fim:</label>
+                    <input type="number" name="fim" id="txtf">
+                </p>
+                <p class="linha">
+                    <label for="txtp">Passo:</label>
+                    <input type="number" name="passo" id="txtp">
+                </p>
+                <div id="alert"></div>
+                <p>
+                    <input type="button" value="Contar" id="contar">
+                    <input type="button" value="Limpar" id="limpar">
+                </p>
+        </section>
+        <section>
+            <div id="res">
+                Preparando a contagem...
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
