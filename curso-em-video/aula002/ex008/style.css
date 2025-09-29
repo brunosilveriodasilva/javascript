@@ -90,6 +90,7 @@ select {
     border: 1;
     border-radius: 5px;
     padding: 10px;
+    transition: display 0.3s ease;
 }
 
 #gerar-tab:active {
